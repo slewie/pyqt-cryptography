@@ -30,7 +30,7 @@
         },
         "000000100":{
             "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020100"},
-            "next": : "corn3"
+            "next": "corn3"
         },
         "000000010":{
             "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020010"},
@@ -91,9 +91,125 @@
             }
         }
      },
-    "corn2":{},
-    "corn3":{},
-    "corn4":{},
+    "corn2":{
+        "handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+            "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+            "next": "s0"
+            },
+            "101020000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "121020000"},
+                "next": "corn1corn2"
+            },
+            "011020000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "211020000"},
+                "next": "corn2side1"
+            },
+            "001120000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021120000"},
+                "next": "corn2side2"
+            },
+            "001021000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "001021002"},
+                "next": "corn2side3"
+            },
+            "001020100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021020100"},
+                "next": "corn2corn3"
+            },
+           "001020010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021020010"},
+                "next": "corn2side4"
+            },
+          "001020001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "001022001"},
+                "next": "corn2corn4"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"corn2"
+            }
+    },
+
+    "corn3":{
+        "handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+            "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+            "next": "s0"
+            },
+            "100020100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "100220100"},
+                "next": "corn1corn3"
+            },
+            "010020100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "010220100"},
+                "next": "corn3side1"
+            },
+            "001020100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021020100"},
+                "next": "corn2corn3"
+            },
+            "000120100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "200120100"},
+                "next": "corn3side2"
+            },
+            "000021100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020021100"},
+                "next": "corn3side3"
+            },
+           "000020110":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020112"},
+                "next": "corn3side4"
+            },
+           "000020101":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020121"},
+                "next": "corn3corn4"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"corn3"
+            }
+    },
+    "corn4":{"handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+            "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+            "next": "s0"
+            },
+            "100020001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "120020001"},
+                "next": "corn1corn4"
+            },
+            "010020001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "010220120"},
+                "next": "corn4side1"
+            },
+            "001020001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "001022001"},
+                "next": "corn2corn4"
+            },
+            "000120001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020120001"},
+                "next": "corn4side2"
+            },
+            "000021001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "002021001"},
+                "next": "corn4side3"
+            },
+           "000020011":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020211"},
+                "next": "corn4side4"
+            },
+           "000020101":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020121"},
+                "next": "corn3corn4"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"corn4"
+            }},
     "side1":{
         "handler":"http://tictactoe-input.herokuapp.com",
         "signals":{
@@ -135,9 +251,123 @@
             }
         }
     },
-    "side2":{},
-    "side3":{},
-    "side4":{},
+    "side2":{"handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+                "next": "s0"
+            },
+            "100120000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "100120200"},
+                "next": "corn1side2"
+            },
+            "001120000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021120000"},
+                "next": "corn2side2"
+            },
+            "010120000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "210120000"},
+                "next": "side1side2"
+            },
+            "000121000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020121000"},
+                "next": "side2side3"
+            },
+            "000120100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "200120100"},
+                "next": "corn3side2"
+            },
+            "000120010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020120010"},
+                "next": "side2side4"
+            },
+            "000120001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020120001"},
+                "next": "corn4side2"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"side2"
+            }
+        }},
+    "side3":{"handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+                "next": "s0"
+            },
+            "100021000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "120021000"},
+                "next": "corn1side3"
+            },
+            "010021000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "012021000"},
+                "next": "side1side3"
+            },
+            "000121000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020121000"},
+                "next": "side2side3"
+            },
+            "000021100":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020021100"},
+                "next": "corn3side3"
+            },
+            "000021010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020021010"},
+                "next": "side3side4"
+            },
+            "000021001":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "002021001"},
+                "next": "corn4side3"
+            },
+            "001021000":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "001021002"},
+                "next": "corn2side3"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"side3"
+            }
+        }},
+    "side4":{"handler":"http://tictactoe-input.herokuapp.com",
+        "signals":{
+            "111111111":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "111111111"},
+                "next": "s0"
+            },
+            "100020010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "120020010"},
+                "next": "corn1side4"
+            },
+            "010020010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "010020012"},
+                "next": "side1side4"
+            },
+            "001020010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "021020010"},
+                "next": "corn2side4"
+            },
+            "000120010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020120010"},
+                "next": "side2side4"
+            },
+            "000021010":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "020021010"},
+                "next": "side3side4"
+            },
+            "000020110":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020112"},
+                "next": "corn3side4"
+            },
+            "000020011":{
+                "action": {"type":"image", handler:"http://tictactoe-output.herokuapp.com", input: "000020211"},
+                "next": "corn4side4"
+            },
+            "default":{
+                "action":"Cжульничал",
+                "next":"side4"
+            }
+        }},
     "center":{
         "handler":"http://tictactoe-input.herokuapp.com",
         "signals":{
@@ -179,6 +409,5 @@
             }
     }
 },
-    
   }
 }
